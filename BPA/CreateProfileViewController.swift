@@ -10,8 +10,9 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class CreateProfileViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDelegate {
+class CreateProfileViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var goalTextField: UITextField!
@@ -23,6 +24,7 @@ class CreateProfileViewController: UIViewController, UIPickerViewDataSource,UIPi
     
     private var datePicker: UIDatePicker?
     let db = Firestore.firestore()
+    var profileImage : UIImage?
 
     var ref: DocumentReference? = nil
    
@@ -44,6 +46,32 @@ class CreateProfileViewController: UIViewController, UIPickerViewDataSource,UIPi
         picker.dataSource = self
         goalTextField.inputView = picker
         // Do any additional setup after loading the view.
+        profileImageView.isUserInteractionEnabled = true
+        
+        
+        let singleTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.singleTapping(recognizer: )))
+        singleTap.numberOfTapsRequired = 1;
+        profileImageView.addGestureRecognizer(singleTap)
+        
+        self.view.addSubview(profileImageView)
+    }
+    @objc func singleTapping(recognizer: UIGestureRecognizer) {
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerController.SourceType.photoLibrary
+        image.allowsEditing = false
+        self.present(image,animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            profileImage = image
+            profileImageView.image = image
+        } else {
+            //error message
+
+        }
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {

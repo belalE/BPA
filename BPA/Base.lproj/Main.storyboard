@@ -108,11 +108,12 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Up Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hh1-3G-cZC">
                                 <rect key="frame" x="138" y="53" width="124.5" height="25.5"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dNr-qR-T6w">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dNr-qR-T6w">
                                 <rect key="frame" x="16" y="28" width="76" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="76" id="qLe-vd-Tht"/>
@@ -306,6 +307,7 @@
                         <outlet property="goalTextField" destination="8Ol-IU-JK0" id="M9h-ap-2PF"/>
                         <outlet property="inchesTextField" destination="LJO-dV-kRE" id="Vds-tp-4Sk"/>
                         <outlet property="lastNameTextField" destination="epN-2m-XF7" id="JdX-0R-KMU"/>
+                        <outlet property="profileImageView" destination="dNr-qR-T6w" id="2SY-YM-d9p"/>
                         <outlet property="weightTextField" destination="3qj-fq-TLL" id="Qo0-9e-KzR"/>
                     </connections>
                 </viewController>
