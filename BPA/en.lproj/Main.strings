@@ -1,0 +1,54 @@
+
+/* Class = "UISegmentedControl"; 0N5-7D-pYQ.segmentTitles[0] = "Male"; ObjectID = "0N5-7D-pYQ"; */
+"0N5-7D-pYQ.segmentTitles[0]" = "Male";
+
+/* Class = "UISegmentedControl"; 0N5-7D-pYQ.segmentTitles[1] = "Female"; ObjectID = "0N5-7D-pYQ"; */
+"0N5-7D-pYQ.segmentTitles[1]" = "Female";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "2Cb-xw-X8a"; */
+"2Cb-xw-X8a.normalTitle" = "Sign Up";
+
+/* Class = "UITextField"; placeholder = "lbs"; ObjectID = "3qj-fq-TLL"; */
+"3qj-fq-TLL.placeholder" = "lbs";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "5aD-gS-O38"; */
+"5aD-gS-O38.text" = "Email";
+
+/* Class = "UILabel"; text = "Date of Birth"; ObjectID = "83J-7H-Rgj"; */
+"83J-7H-Rgj.text" = "Date of Birth";
+
+/* Class = "UILabel"; text = "Weight"; ObjectID = "DWY-0T-Z6A"; */
+"DWY-0T-Z6A.text" = "Weight";
+
+/* Class = "UILabel"; text = "Goal"; ObjectID = "Ip3-4B-ejS"; */
+"Ip3-4B-ejS.text" = "Goal";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "KrB-Q6-P19"; */
+"KrB-Q6-P19.text" = "Password";
+
+/* Class = "UITextField"; placeholder = "in."; ObjectID = "LJO-dV-kRE"; */
+"LJO-dV-kRE.placeholder" = "in.";
+
+/* Class = "UILabel"; text = "First Name"; ObjectID = "Pfm-Kb-54I"; */
+"Pfm-Kb-54I.text" = "First Name";
+
+/* Class = "UILabel"; text = "Last Name"; ObjectID = "Ytb-NT-All"; */
+"Ytb-NT-All.text" = "Last Name";
+
+/* Class = "UITextField"; placeholder = "ft"; ObjectID = "afN-tP-ou6"; */
+"afN-tP-ou6.placeholder" = "ft";
+
+/* Class = "UILabel"; text = "Set Up Profile"; ObjectID = "hh1-3G-cZC"; */
+"hh1-3G-cZC.text" = "Set Up Profile";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "oBt-ti-N58"; */
+"oBt-ti-N58.normalTitle" = "Next";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "tp4-Ml-ICH"; */
+"tp4-Ml-ICH.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "wOO-q8-7ZB"; */
+"wOO-q8-7ZB.text" = "Gender";
+
+/* Class = "UILabel"; text = "Height"; ObjectID = "yxP-lZ-Ki6"; */
+"yxP-lZ-Ki6.text" = "Height";
