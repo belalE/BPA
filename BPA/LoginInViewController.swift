@@ -52,13 +52,15 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func prepare(for segue: UIStoryboardSegue, sender: UIButton)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
+        print("prepared")
         if segue.destination is CreateProfileViewController
         {
             let vc = segue.destination as? CreateProfileViewController
             
             vc?.uid = myUserID
+            print("sucess")
         }
     }
     

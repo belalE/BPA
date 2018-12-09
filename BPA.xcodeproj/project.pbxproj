@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B503AEF21BC734600EF959E /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B503AEE21BC734600EF959E /* AddFoodViewController.swift */; };
+		8B503AF121BC88AD00EF959E /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B503AF021BC88AD00EF959E /* Food.swift */; };
 		8B5839A45FDEAD520CA981F0 /* Pods_BPA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A36C5B0A64CE193845C99B0 /* Pods_BPA.framework */; };
+		8B6774D121B7825900116229 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6774D021B7825900116229 /* FoodTableViewController.swift */; };
 		8BE2E8C1218CF63B004A6F67 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE2E8C0218CF63B004A6F67 /* CreateProfileViewController.swift */; };
 		8BE445ED218CE1FA003142E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE445EC218CE1FA003142E1 /* AppDelegate.swift */; };
 		8BE445EF218CE1FA003142E1 /* LoginInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE445EE218CE1FA003142E1 /* LoginInViewController.swift */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		31D94E920B565C4408551E6B /* Pods-BPA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BPA.release.xcconfig"; path = "Pods/Target Support Files/Pods-BPA/Pods-BPA.release.xcconfig"; sourceTree = "<group>"; };
 		3A36C5B0A64CE193845C99B0 /* Pods_BPA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BPA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B503AEE21BC734600EF959E /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
+		8B503AF021BC88AD00EF959E /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		8B6774D021B7825900116229 /* FoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
 		8BE2E8C0218CF63B004A6F67 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		8BE445E9218CE1FA003142E1 /* BPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE445EC218CE1FA003142E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +76,9 @@
 				8BE445EC218CE1FA003142E1 /* AppDelegate.swift */,
 				8BE445EE218CE1FA003142E1 /* LoginInViewController.swift */,
 				8BE445F0218CE1FA003142E1 /* Main.storyboard */,
+				8B503AF021BC88AD00EF959E /* Food.swift */,
+				8B6774D021B7825900116229 /* FoodTableViewController.swift */,
+				8B503AEE21BC734600EF959E /* AddFoodViewController.swift */,
 				8BE2E8C0218CF63B004A6F67 /* CreateProfileViewController.swift */,
 				8BE445F6218CE1FB003142E1 /* Assets.xcassets */,
 				8BE445F8218CE1FB003142E1 /* LaunchScreen.storyboard */,
@@ -240,7 +249,10 @@
 			files = (
 				8BE2E8C1218CF63B004A6F67 /* CreateProfileViewController.swift in Sources */,
 				8BE445F5218CE1FA003142E1 /* BPA.xcdatamodeld in Sources */,
+				8B6774D121B7825900116229 /* FoodTableViewController.swift in Sources */,
+				8B503AF121BC88AD00EF959E /* Food.swift in Sources */,
 				8BE445EF218CE1FA003142E1 /* LoginInViewController.swift in Sources */,
+				8B503AEF21BC734600EF959E /* AddFoodViewController.swift in Sources */,
 				8BE445ED218CE1FA003142E1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

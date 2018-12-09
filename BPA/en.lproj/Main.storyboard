@@ -60,14 +60,14 @@
                                         <rect key="frame" x="168.5" y="100" width="38" height="30"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
-                                            <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U88-rT-JAW"/>
+                                            <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xmJ-9G-ylV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cb-xw-X8a">
                                         <rect key="frame" x="160.5" y="150" width="54" height="30"/>
                                         <state key="normal" title="Sign Up"/>
                                         <connections>
-                                            <action selector="signUpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yzm-YL-Bud"/>
+                                            <action selector="signUpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i5g-bx-7ew"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -88,116 +88,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="emailField" destination="wui-DK-bB6" id="iPV-w9-ar1"/>
-                        <outlet property="passwordField" destination="Ymw-35-LB6" id="oNB-mg-kWC"/>
+                        <outlet property="emailTextField" destination="wui-DK-bB6" id="yqi-8W-XUe"/>
+                        <outlet property="passwordTextField" destination="Ymw-35-LB6" id="iZh-pF-iiE"/>
                         <segue destination="78o-0c-Psv" kind="show" identifier="setUpProfile" id="N5k-wR-laD"/>
-                        <segue destination="aUt-hy-zEw" kind="show" identifier="Login" id="UkJ-jN-YaH"/>
+                        <segue destination="31Z-dQ-2d3" kind="show" identifier="Login" id="Svq-kb-Kyq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="104.7976011994003"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="F8j-dN-Fuf">
-            <objects>
-                <tabBarController id="aUt-hy-zEw" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uka-zZ-fgj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="197-jy-Cu7" kind="relationship" relationship="viewControllers" id="0hs-zk-YU0"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9UB-J8-fBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1100" y="611"/>
-        </scene>
-        <!--Food Table View Controller-->
-        <scene sceneID="nR4-lb-Ehi">
-            <objects>
-                <tableViewController id="b5m-fv-VeE" userLabel="Food Table View Controller" customClass="FoodTableViewController" customModule="BPA" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nvQ-nJ-vde">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="rCU-xu-av8">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rCU-xu-av8" id="f9f-ig-fyi">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="b5m-fv-VeE" id="bTs-ru-xFh"/>
-                            <outlet property="delegate" destination="b5m-fv-VeE" id="0Ve-wA-rAE"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="NqE-W9-amS">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Xit-8E-NEh">
-                            <connections>
-                                <segue destination="dOS-eH-64H" kind="presentation" id="lP2-gM-GWQ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xN8-tI-tGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2400.8000000000002" y="1386.656671664168"/>
-        </scene>
-        <!--Add Food View Controller-->
-        <scene sceneID="iZJ-sB-Nxq">
-            <objects>
-                <viewController id="WVD-KM-d5V" customClass="AddFoodViewController" customModule="BPA" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ekf-4q-GEl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dp2-sc-KmR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="WVD-KM-d5V" id="Bbu-wf-VW2"/>
-                                </connections>
-                            </searchBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ogw-kg-8QC"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="nos-Iy-HKp">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tRy-5W-wd6">
-                            <connections>
-                                <action selector="cancelClicked:" destination="WVD-KM-d5V" id="Bba-Ge-E0k"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="pIy-8F-m8S">
-                            <connections>
-                                <action selector="saveClicked:" destination="WVD-KM-d5V" id="Liw-Jv-EZN"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="13l-qD-TDg" id="vpb-QZ-hZN"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AcR-9h-5jq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="13l-qD-TDg">
-                    <connections>
-                        <outlet property="delegate" destination="WVD-KM-d5V" id="KQe-21-uId"/>
-                        <outlet property="searchBar" destination="dp2-sc-KmR" id="pYD-xe-pBy"/>
-                        <outlet property="searchContentsController" destination="WVD-KM-d5V" id="rih-cy-tFh"/>
-                        <outlet property="searchResultsDataSource" destination="WVD-KM-d5V" id="cCx-dX-vEg"/>
-                        <outlet property="searchResultsDelegate" destination="WVD-KM-d5V" id="nBZ-Xv-VcV"/>
-                    </connections>
-                </searchDisplayController>
-            </objects>
-            <point key="canvasLocation" x="4199.1999999999998" y="1386.656671664168"/>
         </scene>
         <!--Create Profile View Controller-->
         <scene sceneID="mpd-vw-Ye3">
@@ -209,12 +108,11 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Up Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hh1-3G-cZC">
                                 <rect key="frame" x="138" y="53" width="124.5" height="25.5"/>
-                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dNr-qR-T6w">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dNr-qR-T6w">
                                 <rect key="frame" x="16" y="28" width="76" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="76" id="qLe-vd-Tht"/>
@@ -408,54 +306,27 @@
                         <outlet property="goalTextField" destination="8Ol-IU-JK0" id="M9h-ap-2PF"/>
                         <outlet property="inchesTextField" destination="LJO-dV-kRE" id="Vds-tp-4Sk"/>
                         <outlet property="lastNameTextField" destination="epN-2m-XF7" id="JdX-0R-KMU"/>
-                        <outlet property="profileImageView" destination="dNr-qR-T6w" id="2SY-YM-d9p"/>
                         <outlet property="weightTextField" destination="3qj-fq-TLL" id="Qo0-9e-KzR"/>
-                        <segue destination="aUt-hy-zEw" kind="show" identifier="profileCreated" id="rK2-nT-mhO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2z-BY-yiw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1404" y="-290.10494752623691"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="j4A-eR-N3X">
+        <!--View Controller-->
+        <scene sceneID="MqZ-ef-Qv9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="197-jy-Cu7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5Y6-xy-y0q"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ejm-g9-iCY">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="b5m-fv-VeE" kind="relationship" relationship="rootViewController" id="wIl-KS-PVR"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jn0-rK-kf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="31Z-dQ-2d3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tsd-c5-ahT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8EG-rp-Dy7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOj-Sn-r7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1461.5999999999999" y="1386.656671664168"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ee2-As-hY9">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dOS-eH-64H" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UdV-Em-T2g">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="WVD-KM-d5V" kind="relationship" relationship="rootViewController" id="lqf-rb-0df"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HsR-La-lBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3260" y="1386.656671664168"/>
+            <point key="canvasLocation" x="1362" y="431"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="rK2-nT-mhO"/>
-    </inferredMetricsTieBreakers>
 </document>

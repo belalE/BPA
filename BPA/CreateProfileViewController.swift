@@ -111,6 +111,7 @@ class CreateProfileViewController: UIViewController, UIPickerViewDataSource,UIPi
     }
     */
     @IBAction func nextButtonTapped(_ sender: Any) {
+        print("next")
         if let f = firstNameTextField.text, let l = lastNameTextField.text, let goal = goalTextField.text,let date = dateTextField.text, let w = weightTextField.text, let feet = Int(feetTextField.text!), let inches = Int(inchesTextField.text!) {
             if genderSegmentedControl.selectedSegmentIndex == 0 {
                 g = "m"
@@ -120,6 +121,7 @@ class CreateProfileViewController: UIViewController, UIPickerViewDataSource,UIPi
                     print("Error adding document : \(err)")
                 } else {
                     print("Document added with ID: \(String(describing: self.uid))")
+                    self.performSegue(withIdentifier: "profileCreated", sender: self)
                 }
                 
             }
