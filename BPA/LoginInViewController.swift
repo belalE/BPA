@@ -33,6 +33,7 @@ class LoginViewController: UIViewController {
                     self.performSegue(withIdentifier: "Login", sender: self)
                 } else {
                     // error
+                    print(error?.localizedDescription)
                 }
             }
         }
@@ -47,6 +48,7 @@ class LoginViewController: UIViewController {
                     self.performSegue(withIdentifier: "setUpProfile", sender: self)
                 } else {
                     //error
+                    print(error?.localizedDescription)
                 }
             }
         }
@@ -54,14 +56,17 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        print("prepared")
         if segue.destination is CreateProfileViewController
         {
             let vc = segue.destination as? CreateProfileViewController
             
             vc?.uid = myUserID
-            print("sucess")
+            
+        } else if segue.destination is FoodTableViewController {
+            let vc = segue.destination as! FoodTableViewController
+            vc.uid = myUserID
         }
+        
     }
     
     
@@ -72,6 +77,15 @@ class LoginViewController: UIViewController {
         passwordField.resignFirstResponder()
     }
 }
+
+    func createAlert(title:String, message : String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default,  handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        alert.present(alert, animated: true, completion: nil)
+        
+    }
     
 
 

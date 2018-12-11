@@ -13,7 +13,7 @@ class FoodTableViewController: UITableViewController {
     
     var sectionHeaders = ["Breakfast","Lunch","Dinner","Snacks"]
     var docRef : DocumentReference?
-    var uid = ""
+    var uid : String?
     var dateFormatter = DateFormatter()
     var quoteListener : ListenerRegistration!
     var breakfastFoods = [String]()
@@ -36,8 +36,8 @@ class FoodTableViewController: UITableViewController {
          food = [breakfastFoods,lunchFoods,dinnerFoods,snackFoods]
         dateFormatter.dateFormat = "mm-dd-yyyy"
         dateString = dateFormatter.string(from: Date(timeIntervalSinceNow: 0.0))
-        docRef = Firestore.firestore().document("users/\(uid)/food")
-        
+        docRef = Firestore.firestore().document("users/\(uid)/food/\(dateString)")
+    
         
         
     }
@@ -75,10 +75,9 @@ class FoodTableViewController: UITableViewController {
         quoteListener = docRef?.addSnapshotListener({ (docSnapshot, error) in
             guard let docSnapshot = docSnapshot, docSnapshot.exists else {return}
             let myData = docSnapshot.data()
-            self.breakfastFoods = docSnapshot["Breakfast"] as! [String]
-            self.lunchFoods = docSnapshot["Lunch"] as! [String]
-            self.dinnerFoods = docSnapshot["Dinner"] as! [String]
-            self.snackFoods = docSnapshot["Snack"] as! [String]
+            self.breakfastFoods = myData!["Breakfast"] as! [String]
+            self.lunchFoods = myData!["Dinner"] as! [String]
+            self.snackFoods = myData!["Snack"] as! [String]
             self.tableView.reloadData()
             
         })

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/macpro/Desktop/BPA/BPA/AddFoodViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:BPA.xcodeproj">
    </FileRef>
    <FileRef

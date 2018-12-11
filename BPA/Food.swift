@@ -124,47 +124,7 @@ struct Food {
         self.containsGluten = containsGluten
     }
     
-    func getFoodInfo(id:Int) -> Food? {
-        var food: Food?
-        let url = "https://api.nutritionix.com/v1_1/item?id=\(id)&appId=896ed69d&appKey=25d4aef3cedd110cda12a08b1a5adf87"
-        let request = URLRequest(url: URL(string: url)!)
-        let task = URLSession.shared.dataTask(with: request) { (data:Data?, response:URLResponse?, error: Error?) in
-            
-            
-            
-            if let data = data {
-                
-                do{
-                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] {
-                        food = try Food.init(json: json)
-                    }
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
-            
-        }
-        return food
-    }
     
-    func foodQuery(phrase : String) {
-        var foodsArray : [Food]?
-        let url = "https://api.nutritionix.com/v1_1/search/\(phrase)?results=0%3A20&cal_min=0&cal_max=50000&fields=item_name%2Cbrand_name%2Citem_id%2Cbrand_id&appId=896ed69d&appKey=25d4aef3cedd110cda12a08b1a5adf87"
-        let request = URLRequest(url: URL(string: url)!)
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let data = data {
-                do{
-                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                        if let hits = json["hits"] as? [[String:Any]] {
-                            for hit in hits {
-                                foodsArray?.append(self.getFoodInfo(id: hit["_id"] as! Int)!)
-                            }
-                        }
-                    }
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
-        }
-    }
+    
+    
 }
